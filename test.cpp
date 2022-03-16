@@ -31,6 +31,17 @@ int main()
     // test vector lwith only one minimum number
     ans &= nMin({4, 2, 8, 5, 3, 50, 7, 1, 3}) == 1;
 
+    // ====== FIBONACCI ======
+    ans &= !isFibonacci(-4);
+    ans &= isFibonacci(0);
+    ans &= isFibonacci(1);
+    ans &= isFibonacci(2);
+    ans &= isFibonacci(89);
+    ans &= isFibonacci(144);
+    ans &= !isFibonacci(12);
+    ans &= !isFibonacci(56);
+    ans &= isFibonacci(10946);
+
     if (ans)
         cout << "Test passed!" << endl;
     else
