@@ -1,4 +1,5 @@
 #include "lib.h"
+#include <math.h>   // sqrt
 
 int maxEven(vector<int> v)
 {
@@ -27,4 +28,18 @@ int nMin(vector<int> v)
     }
 
     return count;
+}
+
+// Help function: to check if x is a perfect square
+bool isPerfectSquare(int x)
+{
+    int s = sqrt(x);
+    return (s*s == x);
+}
+
+bool isFibonacci(int n)
+{
+    if (n < 0)
+        return false;
+    return isPerfectSquare(5*n*n + 4) || isPerfectSquare(5*n*n - 4);
 }
