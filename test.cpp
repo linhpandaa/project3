@@ -42,6 +42,19 @@ int main()
     ans &= !isFibonacci(56);
     ans &= isFibonacci(10946);
 
+    // ====== Sum of all fibonacci numbers ======
+    // test sample #4 (1)
+    ans &= sumFibonacci({1, 3, 5, 8, 2}) == 19;
+    // test sample #4 (2): no fibonacci numbers
+    ans &= sumFibonacci({4, 0, 9, 6}) == 0;
+    // test empty vector
+    ans &= sumFibonacci({}) == 0;
+    // test negative numbers
+    ans &= sumFibonacci({0, -1, -2, -3, -5, 8, -13}) == 8;
+    ans &= sumFibonacci({-5, -4, -1}) == 0;
+    // test all fibonacci numbers
+    ans &= sumFibonacci({1, 2, 3, 5, 8, 13, 21, 34}) == 87;
+
     if (ans)
         cout << "Test passed!" << endl;
     else
