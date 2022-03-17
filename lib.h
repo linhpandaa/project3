@@ -14,3 +14,7 @@ int nMin(vector<int>);
 // Источник: https://en.wikipedia.org/wiki/Fibonacci_number#Identification
 // код ошибки: 0 (когда целое число отрицательное)
 bool isFibonacci(int);
+
+// вычислить сумму чисел Фибоначчи из последовательности
+// в случае нет таких чисел, то возвращать значение 0
+int sumFibonacci(vector<int>);

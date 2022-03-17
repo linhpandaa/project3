@@ -43,3 +43,12 @@ bool isFibonacci(int n)
         return false;
     return isPerfectSquare(5*n*n + 4) || isPerfectSquare(5*n*n - 4);
 }
+
+int sumFibonacci(vector<int> v)
+{
+    int s = 0;
+    for (int x: v)
+        if (isFibonacci(x))
+            s += x;
+    return s;
+}
